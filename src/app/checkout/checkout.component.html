@@ -1,0 +1,225 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<section class="font-['Montserrat']">
+    <h1 class="text-center mx-auto m-10 ">Checkout</h1>
+    <div class="grid grid-cols-1 mx-auto max-w-screen-2xl md:grid-cols-2">
+        <div class="py-12 bg-gray-50 md:py-24">
+            <div class="max-w-lg px-4 mx-auto space-y-8 lg:px-8">
+                <div>
+
+
+                    <p class="mt-1 text-sm text-gray-600">Product Price : </p>
+                    <p class="text-2xl font-medium tracking-tight text-gray-900">
+                        {{product.productPrice | currency : '₱ '}}
+                    </p>
+                </div>
+                <div>
+                    <div class="flow-root">
+                        <ul class="my-4 ">
+                            <li class="flex items-center py-4">
+                                <img src="{{product.imageUrl}}" alt="" class="object-cover w-80 h-80 rounded" />
+
+                                <div class="ml-4">
+                                    <h3 class="text-sm text-gray-900">{{product.productName}}</h3>
+
+                                    <dl class="mt-0.5 space-y-px text-[10px] text-gray-600">
+                                        <div>
+                                            <dd class="inline">Stock : </dd>
+                                            <dt class="inline">{{product.productStock}}</dt>
+                                            
+                                        </div>
+                                        <div>
+                                            <dt class="inline">Categoy: </dt>
+                                            <dd class="inline">{{product.category}}</dd>
+                                        </div>
+                                    </dl>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="py-12 bg-white md:py-24">
+            <div class="max-w-lg px-4 mx-auto lg:px-8">
+                <form class="grid grid-cols-6 gap-4 font-[Montserrat]" me="inputControl" (ngSubmit)="onSubmit()">
+                    <div class="col-span-6 form-group">
+                        <label for="customerName" class=" block text-xs font-medium text-gray-700">
+                            Name
+                        </label>
+                        <div class="relative flex items-center text-gray-400 focus-within:text-[#F43F5E]">
+                            <svg fill="none" class="w-6 h-5 absolute ml-1 fill-current" stroke="currentColor"
+                                stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z">
+                                </path>
+                            </svg>
+                            <input type="text" class="form-control" id="customerName" required
+                                [(ngModel)]="customer.customerName" [ngModelOptions]="{standalone: true}"
+                                name="customerName"
+                                class="w-full mt-1 fill-current pl-7 border-gray-400 py-[5px] text-sm px-2 rounded-md border  focus:border-rose-400 focus:outline-none focus:ring-1 focus:ring-rose-400  text-gray-500"
+                                placeholder="Enter name" />
+                        </div>
+                    </div>
+                    <div class="col-span-6 form-group">
+                        <label for="email" class="block text-xs font-medium text-gray-700">
+                            Email
+                        </label>
+                        <div class="relative flex items-center text-gray-400 focus-within:text-[#F43F5E]">
+                            <svg class="w-6 h-5 absolute ml-1 fill-current" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M14.243 5.757a6 6 0 10-.986 9.284 1 1 0 111.087 1.678A8 8 0 1118 10a3 3 0 01-4.8 2.401A4 4 0 1114 10a1 1 0 102 0c0-1.537-.586-3.07-1.757-4.243zM12 10a2 2 0 10-4 0 2 2 0 004 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <input type="email" [ngModelOptions]="{standalone: true}" [(ngModel)]="customer.email" required
+                                class="form-control" id="email"
+                                class="w-full mt-1 fill-current pl-7 border-gray-400 py-[5px] text-sm px-2 rounded-md border  focus:border-rose-400 focus:outline-none focus:ring-1 focus:ring-rose-400  text-gray-500"
+                                placeholder="Enter email" />
+                        </div>
+                    </div>
+                    <div class="col-span-6 form-group">
+                        <label for="quantity" class="block text-xs font-medium text-gray-700">
+                            Quantity
+                        </label>
+                        <div class="relative flex items-center text-gray-400 focus-within:text-[#F43F5E]">
+                            <svg class="w-6 h-5 absolute ml-1 fill-current" fill="none" stroke="currentColor"
+                                stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M6 6.878V6a2.25 2.25 0 012.25-2.25h7.5A2.25 2.25 0 0118 6v.878m-12 0c.235-.083.487-.128.75-.128h10.5c.263 0 .515.045.75.128m-12 0A2.25 2.25 0 004.5 9v.878m13.5-3A2.25 2.25 0 0119.5 9v.878m0 0a2.246 2.246 0 00-.75-.128H5.25c-.263 0-.515.045-.75.128m15 0A2.25 2.25 0 0121 12v6a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 18v-6c0-.98.626-1.813 1.5-2.122">
+                                </path>
+                            </svg>
+                            <input type="number" [ngModelOptions]="{standalone: true}" [(ngModel)]="customer.quantity" 
+                                required class="form-control" id="quantity"
+                                class="w-full mt-1 fill-current pl-7 border-gray-400 py-[5px] text-sm px-2 rounded-md border  focus:border-rose-400 focus:outline-none focus:ring-1 focus:ring-rose-400  text-gray-500"
+                                placeholder="Enter quantity" />
+
+                        </div>
+                    </div>
+
+                    <!-- <div class="col-span-6 form-group">
+                        <label for="productNumber" class="block text-xs font-medium text-gray-700">
+                            Product number
+                        </label>
+                        <div class="relative flex items-center text-gray-400 focus-within:text-[#F43F5E]">
+                            <svg class="w-6 h-5 absolute ml-1 fill-current" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M14.243 5.757a6 6 0 10-.986 9.284 1 1 0 111.087 1.678A8 8 0 1118 10a3 3 0 01-4.8 2.401A4 4 0 1114 10a1 1 0 102 0c0-1.537-.586-3.07-1.757-4.243zM12 10a2 2 0 10-4 0 2 2 0 004 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg> -->
+                    <input type="productNumber" [ngModelOptions]="{standalone: true}" value="productId" hidden required
+                        [(ngModel)]="customer.productNumber" class="form-control" id="productNumber"
+                        class="w-full mt-1 fill-current pl-7 border-gray-400 py-[5px] text-sm px-2 rounded-md border  focus:border-rose-400 focus:outline-none focus:ring-1 focus:ring-rose-400  text-gray-500"
+                        placeholder="Enter productNumber" />
+                    <!-- </div>
+                    </div> -->
+
+
+                    <div class="col-span-6 form-group">
+                        <label for="phone" class="block text-xs font-medium text-gray-700">
+                            Phone
+                        </label>
+
+                        <div class="relative flex items-center text-gray-400 focus-within:text-[#F43F5E]">
+                            <svg class="w-6 h-5 absolute ml-1 fill-current" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z">
+                                </path>
+                            </svg>
+                            <input type="text" required [ngModelOptions]="{standalone: true}"
+                                [(ngModel)]="customer.phone" class="form-control" id="phone"
+                                class="w-full mt-1 fill-current pl-7 border-gray-400 py-[5px] text-sm px-2 rounded-md border  focus:border-rose-400 focus:outline-none focus:ring-1 focus:ring-rose-400  text-gray-500"
+                                placeholder="Enter phone number" />
+                        </div>
+                    </div>
+
+                    <fieldset class="col-span-6">
+                        <legend class="block text-sm font-medium text-gray-700">
+                            Card Details
+                        </legend>
+
+                        <div class="mt-1 -space-y-px bg-white rounded-md shadow-sm">
+                            <div class="form-group">
+                                <label for="cardDetails" class="sr-only"> Card Number </label>
+                                <div class="relative flex items-center text-gray-400 focus-within:text-[#F43F5E]">
+                                    <svg class="w-6 h-5 absolute ml-1 fill-current" fill="currentColor"
+                                        viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                    <input type="text" required [ngModelOptions]="{standalone: true}"
+                                        [(ngModel)]="customer.cardDetails" class="form-control" id="cardDetails"
+                                        class="w-full mt-1 fill-current pl-7 border-gray-400 py-[5px] text-sm px-2 rounded-md border  focus:border-rose-400 focus:outline-none focus:ring-1 focus:ring-rose-400  text-gray-500"
+                                        placeholder="Enter card details" />
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <div class="col-span-6 form-group">
+                        <label for="address" class="block text-xs font-medium text-gray-700">
+                            Address
+                        </label>
+                        <div class="relative flex items-center text-gray-400 focus-within:text-[#F43F5E]">
+                            <svg class="w-6 h-5 absolute ml-1 fill-current" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <input type="text" required [ngModelOptions]="{standalone: true}"
+                                [(ngModel)]="customer.address" class="form-control" id="address"
+                                class="w-full mt-1 fill-current pl-7 border-gray-400 py-[5px] text-sm px-2 rounded-md border  focus:border-rose-400 focus:outline-none focus:ring-1 focus:ring-rose-400  text-gray-900"
+                                placeholder="Ex. Rodriguez, Rizal" />
+                        </div>
+                    </div>
+                    <div class="col-span-6">
+                        <button type="submit" data-modal-target="popup-modal" data-modal-toggle="popup-modal"
+                            
+                            class="btn btn-success block w-full rounded-md bg-rose-500 p-2.5 text-sm text-white transition hover:shadow-lg">
+                            Pay now
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div  tabindex="-1"
+        class="fixed top-0 left-0 right-0 z-50 hidden p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full">
+        <div class="relative w-full h-full max-w-md md:h-auto">
+            <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                <button type="button"
+                    class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
+                    data-modal-hide="popup-modal">
+                    <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+                <div class="p-6 text-center">
+                    <svg aria-hidden="true" class="mx-auto mb-4 text-gray-400 w-14 h-14 dark:text-gray-200" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">Are you sure you want to
+                        delete this product?</h3>
+                    <button data-modal-hide="popup-modal" type="button"
+                        class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2">
+                        Yes, I'm sure
+                    </button>
+                    <button data-modal-hide="popup-modal" type="button"
+                        class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">No,
+                        cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

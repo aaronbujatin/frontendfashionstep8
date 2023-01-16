@@ -1,0 +1,146 @@
+<!-- component -->
+
+<body class="font-poppins antialiased">
+    <div id="view" class="h-full w-screen flex flex-row" x-data="{ sidenav: true }">
+        <button
+            class="p-2 border-2 bg-white rounded-md border-gray-200 shadow-lg text-gray-500 focus:bg-teal-500 focus:outline-none focus:text-white absolute top-0 left-0 sm:hidden">
+            <svg class="w-5 h-5 fill-current" fill="currentColor" viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                    d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                    clip-rule="evenodd"></path>
+            </svg>
+        </button>
+        <div id="sidebar"
+            class="bg-white h-screen md:block shadow-xl px-3 w-30 md:w-60 lg:w-60 overflow-x-hidden transition-transform duration-300 ease-in-out"
+            x-show="sidenav">
+            <div class="space-y-6 md:space-y-10 mt-10">
+                <h1 class="font-bold text-4xl text-center md:hidden">
+                    D<span class="text-teal-600">.</span>
+                </h1>
+                <h1 class="hidden md:block font-bold text-sm md:text-xl text-center">
+                    Dashwind<span class="text-teal-600">.</span>
+                </h1>
+                <div id="profile" class="space-y-3">
+                    <img src="data:image/jpeg;base64,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"
+                        alt="Avatar user" class="w-10 md:w-16 rounded-full mx-auto" />
+                    <div>
+                        <h2 class="font-medium text-xs md:text-sm text-center text-teal-500">
+                            Sir norman
+                        </h2>
+                        <p class="text-xs text-gray-500 text-center">Administrator</p>
+                    </div>
+                </div>
+                <div class="flex border-2 border-gray-200 rounded-md focus-within:ring-2 ring-teal-500">
+                    <input type="text"
+                        class="w-full rounded-tl-md rounded-bl-md px-2 py-3 text-sm text-gray-600 focus:outline-none"
+                        placeholder="Search" />
+                    <button class="rounded-tr-md rounded-br-md px-2 py-3 hidden md:block">
+                        <svg class="w-4 h-4 fill-current" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div id="menu" class="flex flex-col space-y-2">
+                    <a href=""
+                        class="text-sm font-medium text-gray-700 py-2 px-2 hover:bg-teal-500 hover:text-white hover:text-base rounded-md transition duration-150 ease-in-out">
+                        <svg class="w-6 h-6 fill-current inline-block" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z">
+                            </path>
+                        </svg>
+                        <span class="">Dashboard</span>
+                    </a>
+                    <a href=""
+                        class="text-sm font-medium text-gray-700 py-2 px-2 hover:bg-teal-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out">
+                        <svg class="w-6 h-6 fill-current inline-block" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M11 17a1 1 0 001.447.894l4-2A1 1 0 0017 15V9.236a1 1 0 00-1.447-.894l-4 2a1 1 0 00-.553.894V17zM15.211 6.276a1 1 0 000-1.788l-4.764-2.382a1 1 0 00-.894 0L4.789 4.488a1 1 0 000 1.788l4.764 2.382a1 1 0 00.894 0l4.764-2.382zM4.447 8.342A1 1 0 003 9.236V15a1 1 0 00.553.894l4 2A1 1 0 009 17v-5.764a1 1 0 00-.553-.894l-4-2z">
+                            </path>
+                        </svg>
+                        <span class="">Products</span>
+                    </a>
+                    <a href=""
+                        class="text-sm font-medium text-gray-700 py-2 px-2 hover:bg-teal-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out">
+                        <svg class="w-6 h-6 fill-current inline-block" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path>
+                            <path fill-rule="evenodd"
+                                d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="">Reports</span>
+                    </a>
+                    <a href=""
+                        class="text-sm font-medium text-gray-700 py-2 px-2 hover:bg-teal-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out">
+                        <svg class="w-6 h-6 fill-current inline-block" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z"></path>
+                            <path
+                                d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z">
+                            </path>
+                        </svg>
+                        <span class="">Messages</span>
+                    </a>
+                    <a href=""
+                        class="text-sm font-medium text-gray-700 py-2 px-2 hover:bg-teal-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out">
+                        <svg class="w-6 h-6 fill-current inline-block" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="">Calendar</span>
+                    </a>
+                    <a href=""
+                        class="text-sm font-medium text-gray-700 py-2 px-2 hover:bg-teal-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out">
+                        <svg class="w-6 h-6 fill-current inline-block" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="">Table</span>
+                    </a>
+                    <a href=""
+                        class="text-sm font-medium text-gray-700 py-2 px-2 hover:bg-teal-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out">
+                        <svg class="w-6 h-6 fill-current inline-block" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM14 11a1 1 0 011 1v1h1a1 1 0 110 2h-1v1a1 1 0 11-2 0v-1h-1a1 1 0 110-2h1v-1a1 1 0 011-1z">
+                            </path>
+                        </svg>
+                        <span class="">UI Components</span>
+                    </a>
+                    <a href=""
+                        class="text-sm font-medium text-gray-700 py-2 px-2 hover:bg-teal-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out">
+                        <svg class="w-6 h-6 fill-current inline-block" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z">
+                            </path>
+                        </svg>
+                        <span class="">Users</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/graph.js" type="text/javascript"></script>
+    <script>
+        var user = document.getElementById("user-chart").nodeName;
+        var chart = new Graph({
+            data: [1, 20, 5, 6, 8],
+            target: document.querySelector(user),
+        });
+    </script>
+</body>
+
+<router-outlet name="dashboard"></router-outlet>

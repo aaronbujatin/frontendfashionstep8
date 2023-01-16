@@ -1,0 +1,397 @@
+<app-header></app-header>
+<section
+  class="relative bg-[url('https://www.ireneisgood.com/data/images/banners/1/hero(1).jpg')] h-[800px] bg-cover bg-center bg-no-repeat">
+  <div class="absolute inset-0 bg-white/75 sm:bg-transparent sm:bg-gradient-to-r sm:from-white/95 sm:to-white/25"></div>
+  <div
+    class="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8 font-[Montserrat]">
+    <div class="max-w-xl text-center sm:text-left">
+      <h1 class="text-3xl font-extrabold sm:text-5xl">
+        Fall at its finest.
+        <strong class="block font-extrabold text-rose-600">
+          Kick it all off with your shoes
+        </strong>
+      </h1>
+
+      <p class="mt-4 max-w-lg sm:text-xl sm:leading-relaxed">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt illo
+        tenetur fuga ducimus numquam ea!
+      </p>
+
+      <div class="mt-8 flex flex-wrap gap-4 text-center">
+        <a href="#"
+          class="block w-full  bg-rose-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-rose-700 focus:outline-none focus:ring active:bg-rose-500 sm:w-auto">
+          Shop now
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- New Arrival Products -->
+<h1 class="text-2xl mt-20 font-semibold font-[Montserrat] text-center">New Arrivals</h1>
+<div class="flex flex-wrap justify-center items-center space-x-8 py-8 font-[Montserrat]">
+  <div *ngFor="let product of products"
+    class="p-6 bg-white shadow-xl hover:shadow-2xl hover:scale-105 transition-all transform duration-500 m-4 w-[300px]">
+    <a [routerLink]="['/product-details', product.id]">
+      <img class="w-64 object-cover rounded-t-md" src="{{product?.imageUrl}}" alt="" />
+      <div class="mt-4">
+        <h1 class="text-xl font-bold text-gray-700">{{product?.productName}}</h1>
+        <p class="text-sm mt-2 text-gray-700">Stock : {{product?.productStock}}</p>
+        <div class="flex items-center mt-2.5 mb-5">
+          <svg class="w-5 h-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+            </path>
+          </svg>
+          <svg class="w-5 h-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+            </path>
+          </svg>
+          <svg class="w-5 h-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+            </path>
+          </svg>
+          <svg class="w-5 h-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+            </path>
+          </svg>
+          <svg class="w-5 h-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+            </path>
+          </svg>
+          <span
+            class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-3">5.0</span>
+        </div>
+        <div class="mt-4 mb-2 flex justify-between pl-4 pr-2">
+          <button class="block text-xl font-semibold text-gray-700 cursor-auto">{{product?.productPrice | currency :
+            '₱'}}</button>
+
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+
+<!-- Feature -->
+
+<h1 class="text-2xl mt-20 font-semibold font-[Montserrat] text-center">Feature</h1>
+<div class="h-full my-6 font-[Montserrat] ">
+  <div class="container mx-auto  lg:px-20">
+    <div class='grid grid-cols-3 h-full pb-40'>
+      <div class="border-r border-gray-300 mx-3 lg:pl-20">
+        <div
+          class=" py-10 pb-3 mt-72 h-4/6 relative bg-purple-100 group hover:bg-purple-200 cursor-pointer transition ease-out duration-300">
+          <div class="items-center mx-20">
+            <img src="https://freepngimg.com/thumb/shoes/55552-7-sneakers-image-free-hd-image-thumb.png"
+              alt="https://www.pngegg.com/en/png-nllal/download">
+          </div>
+          <div class="px-7 mt-20">
+            <h1 class="text-3xl font-bold group-hover:text-purple-300 transition ease-out duration-300">01.</h1>
+            <h2 class="text-1xl mt-4 font-bold">Kingston Fury</h2>
+            <p class="mt-2 opacity-60 group-hover:opacity-70 ">A power that Runs you</p>
+          </div>
+        </div>
+      </div>
+      <div class="border-r border-gray-300 mx-3 lg:pl-20">
+        <div
+          class=" py-10  pb-3 mt-32 h-4/6 relative bg-indigo-100 group hover:bg-indigo-200 cursor-pointer transition ease-out duration-300">
+          <div class="items-center mx-20">
+
+            <img src="https://freepngimg.com/thumb/shoes/55532-3-sneakers-hd-image-free-png-thumb.png"
+              alt="https://www.pngegg.com/en/png-zquqj/download">
+          </div>
+          <div class="px-7 mt-20">
+            <h1 class="text-3xl font-bold group-hover:text-indigo-300 transition ease-out duration-300">02.</h1>
+            <h2 class="text-1xl mt-4 font-bold">Crucial Ballistic</h2>
+            <p class="mt-2 opacity-60 group-hover:opacity-70 ">Imagine the Best in Every Shoe</p>
+          </div>
+        </div>
+      </div>
+      <div class="border-r border-gray-300 mx-3 lg:pl-20">
+        <div
+          class=" py-10 pb-3 mt-5 h-4/6 relative bg-red-100 group hover:bg-red-200 cursor-pointer transition ease-out duration-300">
+          <div class="items-center mx-20">
+            <div class="w-4 h-1/5 	absolute right-0 -bottom-44 bg-red-100 group-hover:bg-red-50"></div>
+            <img src="https://freepngimg.com/thumb/shoes/55574-6-sneakers-picture-png-file-hd-thumb.png"
+              alt="https://www.pngegg.com/en/png-epwii/download">
+          </div>
+          <div class="px-7 mt-5">
+            <h1 class="text-3xl font-bold group-hover:text-red-300 transition ease-out duration-300">03.</h1>
+            <h2 class="text-1xl mt-4 font-bold">Corsair Vengeance</h2>
+            <p class="mt-2 opacity-60 group-hover:opacity-70 ">A passion for Curiosity</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Services -->
+<div id="services" class="section relative pb-8 md:pb-0 font-[Montserrat]">
+  <div class="container xl:max-w-6xl mx-auto px-4">
+    <!-- Heading start -->
+    <header class="text-center mx-auto mb-8 lg:px-20">
+      <h2 class="text-2xl leading-normal font-bold mb-2 text-black">Services</h2>
+      <p class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2">Save time managing advertising &amp;
+        Content for your business.</p>
+    </header>
+    <!-- End heading -->
+    <!-- row -->
+    <div class="flex flex-wrap flex-row -mx-4 text-center">
+      <div class="flex-shrink px-4 max-w-full w-full sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp" data-wow-duration="1s"
+        style="visibility: visible; animation-duration: 1s; animation-name: fadeInUp;">
+        <!-- service block -->
+        <div
+          class="py-8 px-12 mb-12  border-b border-gray-100 transform transition duration-300 ease-in-out hover:-translate-y-2">
+          <div class="inline-block text-gray-900 mb-4">
+            <!-- width="2rem" height="2rem" -->
+            <!-- icon -->
+            <!-- icon666.com - MILLIONS vector ICONS FREE --><svg viewBox="0 -75 512.001 512" width="2rem" height="2rem"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="m100.664062 271.96875c-16.496093 0-29.921874 13.417969-29.921874 29.910156 0 16.5 13.425781 29.921875 29.921874 29.921875 16.496094 0 29.914063-13.421875 29.914063-29.921875 0-16.492187-13.417969-29.910156-29.914063-29.910156zm0 39.828125c-5.464843 0-9.914062-4.449219-9.914062-9.917969 0-5.460937 4.449219-9.90625 9.914062-9.90625 5.464844 0 9.90625 4.445313 9.90625 9.90625 0 5.46875-4.441406 9.917969-9.90625 9.917969zm0 0"
+                fill="#000000" style="fill: rgb(225, 29, 72);"></path>
+              <path
+                d="m406.480469 272.78125c-13.546875 3.226562-23 15.195312-22.984375 29.109375 0 2.296875.277344 4.628906.820312 6.925781 3.269532 13.722656 15.566406 22.984375 29.109375 22.984375 2.289063 0 4.613281-.261719 6.9375-.816406 13.542969-3.234375 22.988281-15.207031 22.976563-29.105469 0-2.332031-.273438-4.664062-.816406-6.933594-3.832032-16.050781-20-25.988281-36.042969-22.164062zm9.238281 38.742188c-5.316406 1.273437-10.671875-2.027344-11.9375-7.335938-.1875-.785156-.28125-1.5625-.28125-2.308594 0-.003906 0-.007812 0-.007812-.003906-4.601563 3.125-8.5625 7.621094-9.628906.769531-.183594 1.539062-.273438 2.296875-.273438 4.484375 0 8.558593 3.070312 9.644531 7.625.179688.746094.269531 1.515625.269531 2.296875.003907 4.597656-3.128906 8.5625-7.613281 9.632813zm0 0"
+                fill="#000000" style="fill: rgb(225, 29, 72);"></path>
+              <path
+                d="m63.015625 192.296875h62.238281c5.527344 0 10.003906-4.480469 10.003906-10.003906v-61.007813c0-5.523437-4.476562-10-10.003906-10h-52.335937c-10.851563 0-19.707031 8.828125-19.742188 19.679688l-.164062 51.296875c-.007813 2.65625 1.042969 5.210937 2.917969 7.09375 1.878906 1.882812 4.429687 2.941406 7.085937 2.941406zm10.164063-61.007813h42.070312v41h-42.199219zm0 0"
+                fill="#000000" style="fill: rgb(225, 29, 72);"></path>
+              <path
+                d="m81.851562 204.453125h-17.679687c-5.523437 0-10.003906 4.480469-10.003906 10.003906 0 5.523438 4.480469 10.003907 10.003906 10.003907h17.679687c5.523438 0 10-4.480469 10-10.003907 0-5.523437-4.476562-10.003906-10-10.003906zm0 0"
+                fill="#000000" style="fill: rgb(225, 29, 72);"></path>
+              <path
+                d="m163.703125 191.53125c5.523437 0 10-4.480469 10-10.003906v-60.242188c0-5.523437-4.476563-10.003906-10-10.003906-5.527344 0-10.003906 4.480469-10.003906 10.003906v60.242188c0 5.527344 4.476562 10.003906 10.003906 10.003906zm0 0"
+                fill="#000000" style="fill: rgb(225, 29, 72);"></path>
+              <path
+                d="m501.996094 0h-296.84375c-37.253906 0-71.960938 14.683594-100.367188 42.460938-14.875 14.550781-24.355468 29.0625-28.851562 36.761718h-20.304688c-19.253906 0-34.917968 15.664063-34.921875 34.914063l-.019531 132.503906h-10.683594c-5.527344 0-10.003906 4.476563-10.003906 10v45.238281c0 5.527344 4.476562 10.003906 10.003906 10.003906h32.277344c4.769531 27.925782 29.125 49.25 58.382812 49.25 29.257813 0 53.613282-21.328124 58.382813-49.25h195.988281c4.769532 27.925782 29.125 49.25 58.382813 49.25 29.257812 0 53.613281-21.328124 58.382812-49.25h30.199219c5.523438 0 10-4.476562 10-10.003906v-291.875c0-5.523437-4.476562-10.003906-10.003906-10.003906zm-10 198.894531h-276.84375v-178.886719h276.84375zm-296.847656-178.476562v58.804687h-95.40625c14.175781-20.117187 45.484374-54.652344 95.40625-58.804687zm-175.144532 246.226562h10.6875c5.523438 0 10-4.480469 10-10.003906l.019532-142.5c0-8.222656 6.695312-14.914063 14.917968-14.914063h139.519532v192.652344h-36.109376c-1.046874-6.125-3.027343-12.0625-5.902343-17.519531-.925781-1.777344-1.96875-3.535156-3.074219-5.1875-11.019531-16.617187-29.484375-26.535156-49.398438-26.535156-22.066406 0-42.164062 12.140625-52.445312 31.679687-2.890625 5.484375-4.878906 11.433594-5.929688 17.5625h-22.285156zm80.660156 74.484375c-21.636718 0-39.238281-17.609375-39.238281-39.25 0-6.445312 1.511719-12.582031 4.492188-18.242187 6.816406-12.949219 20.128906-20.996094 34.746093-20.996094 13.191407 0 25.425782 6.578125 32.75 17.621094.722657 1.082031 1.390626 2.207031 2 3.378906 2.980469 5.65625 4.488282 11.792969 4.488282 18.238281 0 21.640625-17.601563 39.25-39.238282 39.25zm312.753907 0c-21.636719 0-39.238281-17.609375-39.238281-39.25 0-6.445312 1.507812-12.582031 4.496093-18.257812.609375-1.15625 1.238281-2.21875 1.957031-3.296875 7.289063-11.070313 19.542969-17.683594 32.785157-17.683594 14.617187 0 27.929687 8.046875 34.75 21 2.976562 5.652344 4.488281 11.789063 4.488281 18.238281 0 21.640625-17.601562 39.25-39.238281 39.25zm78.578125-49.25h-20.203125c-1.050781-6.125-3.035157-12.078125-5.925781-17.558594-10.285157-19.542968-30.382813-31.683593-52.449219-31.683593-19.992188 0-38.496094 9.976562-49.464844 26.640625-1.066406 1.597656-2.074219 3.300781-2.984375 5.039062-2.890625 5.484375-4.878906 11.433594-5.925781 17.5625h-139.890625v-29.238281h41.574218c5.527344 0 10.003907-4.476563 10.003907-10.003906 0-5.523438-4.476563-10-10.003907-10h-41.574218v-23.734375h276.839844v72.976562zm0 0"
+                fill="#000000" style="fill: rgb(225, 29, 72);"></path>
+              <path
+                d="m312.414062 90.667969c1.289063.699219 2.828126 1.058593 4.570313 1.058593 1.738281 0 3.277344-.355468 4.566406-1.058593 1.980469-1.074219 2.394531-2.664063 2.394531-3.804688v-16.566406h9.074219c1.578125 0 2.855469-.667969 3.699219-1.925781.722656-1.089844 1.089844-2.335938 1.089844-3.703125 0-1.476563-.382813-2.773438-1.140625-3.867188-.867188-1.246093-2.128907-1.90625-3.648438-1.90625h-9.074219v-8.832031h16.636719c1.550781 0 2.824219-.730469 3.6875-2.105469.730469-1.171875 1.101563-2.59375 1.101563-4.226562 0-1.527344-.351563-2.894531-1.050782-4.0625-.835937-1.394531-2.128906-2.128907-3.738281-2.128907h-24.296875c-1.585937 0-2.984375.371094-4.15625 1.105469-1.378906.859375-2.105468 2.160157-2.105468 3.757813v44.460937c0 1.144531.414062 2.730469 2.390624 3.804688zm0 0"
+                fill="#000000" style="fill: rgb(225, 29, 72);"></path>
+              <path
+                d="m351.976562 90.667969c1.289063.699219 2.828126 1.058593 4.570313 1.058593 1.738281 0 3.273437-.355468 4.566406-1.058593 1.976563-1.074219 2.394531-2.664063 2.394531-3.804688v-15.375h2.203126l9.175781 17.8125c.960937 1.859375 2.632812 2.84375 4.835937 2.84375 1.984375 0 3.875-.730469 5.609375-2.164062 1.824219-1.503907 2.75-3.191407 2.75-5.007813 0-.789062-.191406-1.476562-.570312-2.046875l-7.71875-13.984375c5.222656-2.664062 7.871093-7.675781 7.871093-14.917968 0-13.625-10.183593-16.484376-18.726562-16.484376h-14.492188c-1.378906 0-2.589843.5-3.5 1.441407-.890624.925781-1.363281 2.085937-1.363281 3.351562v44.53125c0 1.144531.417969 2.730469 2.394531 3.804688zm11.53125-30.582031v-10.023438h5.429688c1.652344 0 2.886719.371094 3.667969 1.101562.753906.703126 1.132812 2.019532 1.132812 3.910157s-.378906 3.207031-1.132812 3.910156c-.78125.730469-2.015625 1.101563-3.667969 1.101563zm0 0"
+                fill="#000000" style="fill: rgb(225, 29, 72);"></path>
+              <path
+                d="m396.082031 90.621094c1.167969.730468 2.566407 1.105468 4.15625 1.105468h24.925781c1.609376 0 2.902344-.738281 3.738282-2.128906.699218-1.167968 1.054687-2.53125 1.054687-4.066406 0-1.628906-.371093-3.050781-1.105469-4.226562-.863281-1.375-2.136718-2.105469-3.6875-2.105469h-17.265624v-8.902344h9.003906c1.578125 0 2.855468-.667969 3.699218-1.925781.722657-1.089844 1.089844-2.335938 1.089844-3.703125 0-1.472657-.382812-2.773438-1.144531-3.867188-.863281-1.25-2.125-1.90625-3.644531-1.90625h-9.003906v-8.832031h17.265624c1.550782 0 2.828126-.730469 3.6875-2.105469.734376-1.171875 1.105469-2.59375 1.105469-4.226562 0-1.53125-.355469-2.898438-1.054687-4.0625-.835938-1.394531-2.128906-2.128907-3.738282-2.128907h-24.925781c-1.585937 0-2.984375.371094-4.15625 1.105469-1.378906.859375-2.105469 2.160157-2.105469 3.757813v44.460937c0 1.597657.726563 2.898438 2.105469 3.757813zm0 0"
+                fill="#000000" style="fill: rgb(225, 29, 72);"></path>
+              <path
+                d="m437.320312 90.621094c1.171876.730468 2.570313 1.105468 4.160157 1.105468h24.925781c1.609375 0 2.902344-.738281 3.738281-2.128906.699219-1.167968 1.050781-2.53125 1.050781-4.066406 0-1.628906-.371093-3.050781-1.101562-4.226562-.863281-1.375-2.136719-2.105469-3.6875-2.105469h-17.265625v-8.902344h9c1.582031 0 2.859375-.667969 3.699219-1.925781.726562-1.089844 1.09375-2.335938 1.09375-3.703125 0-1.472657-.382813-2.773438-1.144532-3.867188-.867187-1.25-2.128906-1.90625-3.648437-1.90625h-9v-8.832031h17.265625c1.550781 0 2.824219-.730469 3.6875-2.105469.730469-1.171875 1.101562-2.59375 1.101562-4.226562 0-1.53125-.351562-2.898438-1.050781-4.0625-.835937-1.394531-2.128906-2.128907-3.738281-2.128907h-24.925781c-1.589844 0-2.988281.371094-4.15625 1.105469-1.378907.859375-2.105469 2.160157-2.105469 3.757813v44.460937c-.003906 1.597657.726562 2.898438 2.101562 3.757813zm0 0"
+                fill="#000000" style="fill: rgb(225, 29, 72);"></path>
+              <path
+                d="m231.632812 147.710938 51.671876 37.6875c1.742187 1.273437 3.8125 1.921874 5.894531 1.921874 1.546875 0 3.101562-.359374 4.53125-1.085937 3.355469-1.707031 5.46875-5.152344 5.46875-8.917969v-8.277344h169.589843c5.515626 0 9.988282-4.464843 10.003907-9.980468l.089843-39.003906c.007813-2.660157-1.042968-5.210938-2.921874-7.089844-1.875-1.882813-4.421876-2.9375-7.082032-2.9375h-167.171875v-8.089844c0-3.726562-2.070312-7.140625-5.371093-8.863281-3.300782-1.726563-7.285157-1.472657-10.34375.652343l-54.175782 37.691407c-2.65625 1.847656-4.253906 4.863281-4.289062 8.097656s1.492187 6.285156 4.105468 8.195313zm50.121094-26.664063c.507813 5.046875 4.769532 8.984375 9.949219 8.984375h167.152344l-.046875 19h-169.609375c-5.074219 0-9.261719 3.777344-9.914063 8.671875l-24.515625-17.882813zm0 0"
+                fill="#000000" style="fill: rgb(225, 29, 72);"></path>
+              <path
+                d="m291.621094 256.574219c1.574218 3.890625 5.320312 6.253906 9.273437 6.253906 1.25 0 2.519531-.238281 3.75-.734375 5.121094-2.070312 7.589844-7.902344 5.519531-13.023438l-.148437-.363281c-2.070313-5.125-7.90625-7.59375-13.023437-5.519531-5.121094 2.070312-7.589844 7.902344-5.519532 13.023438zm0 0"
+                fill="#000000" style="fill: rgb(225, 29, 72);"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg leading-normal mb-2 font-semibold text-black">Internation Shipping</h3>
+          <p class="text-gray-500">This is a wider card with supporting text below as a natural content.</p>
+        </div>
+        <!-- end service block -->
+      </div>
+      <div class="flex-shrink px-4 max-w-full w-full sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp" data-wow-duration="1s"
+        data-wow-delay=".1s"
+        style="visibility: visible; animation-duration: 1s; animation-delay: 0.1s; animation-name: fadeInUp;">
+        <!-- service block -->
+        <div
+          class="py-8 px-12 mb-12  border-b border-gray-100 transform transition duration-300 ease-in-out hover:-translate-y-2">
+          <div class="inline-block text-gray-900 mb-4">
+            <!-- icon -->
+            <!-- width="2rem" height="2rem" -->
+            <!-- icon666.com - MILLIONS vector ICONS FREE --><!-- icon666.com - MILLIONS vector ICONS FREE --><svg
+              id="Capa_1" width="2rem" height="2rem" enable-background="new 0 0 511.99 511.99"
+              viewBox="0 0 511.99 511.99" xmlns="http://www.w3.org/2000/svg">
+              <g>
+                <path
+                  d="m446.822 213.631-190.827-63.256-190.827 63.256-65.158 103.498 59.984 19.884v110.007l196 64.97 196-64.97v-110.007l59.984-19.884zm-57.5 12.545-133.327 44.195-133.327-44.195 133.327-44.195zm-343.52 74.527 35.627-56.592 151.67 50.276-35.626 56.591zm44.193 46.255 120.345 39.892 30.655-48.693v137.256l-151-50.054zm181 128.454v-137.256l30.655 48.693 120.345-39.892v78.401zm43.522-124.433-35.626-56.591 151.67-50.276 35.627 56.592z"
+                  fill="#000000" style="fill: rgb(225, 22, 79);"></path>
+                <path d="m240.995 0h30v100.174h-30z" fill="#000000" style="fill: rgb(225, 22, 79);"></path>
+                <path d="m122.952 31.63h30v100.174h-30z" transform="matrix(.866 -.5 .5 .866 -22.376 79.924)"
+                  fill="#000000" style="fill: rgb(225, 22, 79);"></path>
+                <path d="m323.951 66.717h100.174v30h-100.174z" transform="matrix(.5 -.866 .866 .5 116.249 364.784)"
+                  fill="#000000" style="fill: rgb(225, 22, 79);"></path>
+              </g>
+            </svg>
+          </div>
+          <h3 class="text-lg leading-normal mb-2 font-semibold text-black">Access and Discover</h3>
+          <p class="text-gray-500">This is a wider card with supporting text below as a natural content.</p>
+        </div>
+        <!-- end service block -->
+      </div>
+      <div class="flex-shrink px-4 max-w-full w-full sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp" data-wow-duration="1s"
+        data-wow-delay=".3s"
+        style="visibility: visible; animation-duration: 1s; animation-delay: 0.3s; animation-name: fadeInUp;">
+        <!-- service block -->
+        <div
+          class="py-8 px-12 mb-12  border-b border-gray-100 transform transition duration-300 ease-in-out hover:-translate-y-2">
+          <div class="inline-block text-gray-900 mb-4">
+            <!-- icon -->
+            <!-- icon666.com - MILLIONS vector ICONS FREE --><svg version="1.1" id="Capa_1" width="2rem" height="2rem"
+              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              viewBox="0 0 201.387 201.387" style="enable-background:new 0 0 201.387 201.387;" xml:space="preserve">
+              <g>
+                <g>
+                  <path
+                    d="M129.413,24.885C127.389,10.699,115.041,0,100.692,0C91.464,0,82.7,4.453,77.251,11.916 c-1.113,1.522-0.78,3.657,0.742,4.77c1.517,1.109,3.657,0.78,4.768-0.744c4.171-5.707,10.873-9.115,17.93-9.115 c10.974,0,20.415,8.178,21.963,19.021c0.244,1.703,1.705,2.932,3.376,2.932c0.159,0,0.323-0.012,0.486-0.034 C128.382,28.479,129.679,26.75,129.413,24.885z"
+                    fill="#000000" style="fill: rgb(225, 22, 79);"></path>
+                </g>
+              </g>
+              <g>
+                <g>
+                  <path
+                    d="M178.712,63.096l-10.24-17.067c-0.616-1.029-1.727-1.657-2.927-1.657h-9.813c-1.884,0-3.413,1.529-3.413,3.413 s1.529,3.413,3.413,3.413h7.881l6.144,10.24H31.626l6.144-10.24h3.615c1.884,0,3.413-1.529,3.413-3.413s-1.529-3.413-3.413-3.413 h-5.547c-1.2,0-2.311,0.628-2.927,1.657l-10.24,17.067c-0.633,1.056-0.648,2.369-0.043,3.439s1.739,1.732,2.97,1.732h150.187 c1.231,0,2.364-0.662,2.97-1.732S179.345,64.15,178.712,63.096z"
+                    fill="#000000" style="fill: rgb(225, 22, 79);"></path>
+                </g>
+              </g>
+              <g>
+                <g>
+                  <path
+                    d="M161.698,31.623c-0.478-0.771-1.241-1.318-2.123-1.524l-46.531-10.883c-0.881-0.207-1.809-0.053-2.579,0.423 c-0.768,0.478-1.316,1.241-1.522,2.123l-3.509,15c-0.43,1.835,0.71,3.671,2.546,4.099c1.835,0.43,3.673-0.71,4.101-2.546 l2.732-11.675l39.883,9.329l-6.267,26.795c-0.43,1.835,0.71,3.671,2.546,4.099c0.263,0.061,0.524,0.09,0.782,0.09 c1.55,0,2.953-1.062,3.318-2.635l7.045-30.118C162.328,33.319,162.176,32.391,161.698,31.623z"
+                    fill="#000000" style="fill: rgb(225, 22, 79);"></path>
+                </g>
+              </g>
+              <g>
+                <g>
+                  <path
+                    d="M102.497,39.692l-3.11-26.305c-0.106-0.899-0.565-1.72-1.277-2.28c-0.712-0.56-1.611-0.816-2.514-0.71l-57.09,6.748 c-1.871,0.222-3.209,1.918-2.988,3.791l5.185,43.873c0.206,1.737,1.679,3.014,3.386,3.014c0.133,0,0.27-0.009,0.406-0.024 c1.87-0.222,3.208-1.918,2.988-3.791l-4.785-40.486l50.311-5.946l2.708,22.915c0.222,1.872,1.91,3.202,3.791,2.99 C101.379,43.261,102.717,41.564,102.497,39.692z"
+                    fill="#000000" style="fill: rgb(225, 22, 79);"></path>
+                </g>
+              </g>
+              <g>
+                <g>
+                  <path
+                    d="M129.492,63.556l-6.775-28.174c-0.212-0.879-0.765-1.64-1.536-2.113c-0.771-0.469-1.696-0.616-2.581-0.406L63.613,46.087 c-1.833,0.44-2.961,2.284-2.521,4.117l3.386,14.082c0.44,1.835,2.284,2.964,4.116,2.521c1.833-0.44,2.961-2.284,2.521-4.117 l-2.589-10.764l48.35-11.626l5.977,24.854c0.375,1.565,1.775,2.615,3.316,2.615c0.265,0,0.533-0.031,0.802-0.096 C128.804,67.232,129.932,65.389,129.492,63.556z"
+                    fill="#000000" style="fill: rgb(225, 22, 79);"></path>
+                </g>
+              </g>
+              <g>
+                <g>
+                  <path
+                    d="M179.197,64.679c-0.094-1.814-1.592-3.238-3.41-3.238H25.6c-1.818,0-3.316,1.423-3.41,3.238l-6.827,133.12 c-0.048,0.934,0.29,1.848,0.934,2.526c0.645,0.677,1.539,1.062,2.475,1.062h163.84c0.935,0,1.83-0.384,2.478-1.062 c0.643-0.678,0.981-1.591,0.934-2.526L179.197,64.679z M22.364,194.56l6.477-126.293h143.701l6.477,126.293H22.364z"
+                    fill="#000000" style="fill: rgb(225, 22, 79);"></path>
+                </g>
+              </g>
+              <g>
+                <g>
+                  <path
+                    d="M126.292,75.093c-5.647,0-10.24,4.593-10.24,10.24c0,5.647,4.593,10.24,10.24,10.24c5.647,0,10.24-4.593,10.24-10.24 C136.532,79.686,131.939,75.093,126.292,75.093z M126.292,88.747c-1.883,0-3.413-1.531-3.413-3.413s1.531-3.413,3.413-3.413 c1.882,0,3.413,1.531,3.413,3.413S128.174,88.747,126.292,88.747z"
+                    fill="#000000" style="fill: rgb(225, 22, 79);"></path>
+                </g>
+              </g>
+              <g>
+                <g>
+                  <path
+                    d="M75.092,75.093c-5.647,0-10.24,4.593-10.24,10.24c0,5.647,4.593,10.24,10.24,10.24c5.647,0,10.24-4.593,10.24-10.24 C85.332,79.686,80.739,75.093,75.092,75.093z M75.092,88.747c-1.882,0-3.413-1.531-3.413-3.413s1.531-3.413,3.413-3.413 s3.413,1.531,3.413,3.413S76.974,88.747,75.092,88.747z"
+                    fill="#000000" style="fill: rgb(225, 22, 79);"></path>
+                </g>
+              </g>
+              <g>
+                <g>
+                  <path
+                    d="M126.292,85.333h-0.263c-1.884,0-3.413,1.529-3.413,3.413c0,0.466,0.092,0.911,0.263,1.316v17.457 c0,12.233-9.953,22.187-22.187,22.187s-22.187-9.953-22.187-22.187V88.747c0-1.884-1.529-3.413-3.413-3.413 s-3.413,1.529-3.413,3.413v18.773c0,15.998,13.015,29.013,29.013,29.013s29.013-13.015,29.013-29.013V88.747 C129.705,86.863,128.176,85.333,126.292,85.333z"
+                    fill="#000000" style="fill: rgb(225, 22, 79);"></path>
+                </g>
+              </g>
+            </svg>
+          </div>
+          <h3 class="text-lg leading-normal mb-2 font-semibold text-black">One stop shop</h3>
+          <p class="text-gray-500">This is a wider card with supporting text below as a natural content.</p>
+        </div>
+        <!-- end service block -->
+      </div>
+      <div class="flex-shrink px-4 max-w-full w-full sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp" data-wow-duration="1s"
+        style="visibility: visible; animation-duration: 1s; animation-name: fadeInUp;">
+        <!-- service block -->
+        <div
+          class="py-8 px-12 mb-12  border-b border-gray-100 transform transition duration-300 ease-in-out hover:-translate-y-2">
+          <div class="inline-block text-gray-900 mb-4">
+            <!-- icon -->
+            <!-- icon666.com - MILLIONS vector ICONS FREE --><svg xmlns="http://www.w3.org/2000/svg" width="2rem"
+              height="2rem" viewBox="0 0 64 64">
+              <g id="Shop">
+                <path
+                  d="M58,20V17a1.29083,1.29083,0,0,0-.05127-.31641L56,10.8374V7a1,1,0,0,0-1-1H53V3a1,1,0,0,0-1-1H12a1,1,0,0,0-1,1V6H9A1,1,0,0,0,8,7v3.8374L6.05127,16.68359A1.34755,1.34755,0,0,0,6,17v3a6.00448,6.00448,0,0,0,5,5.90967V56H8a1,1,0,0,0-1,1v4a1,1,0,0,0,1,1H56a1,1,0,0,0,1-1V57a1,1,0,0,0-1-1H53V25.90967A6.00448,6.00448,0,0,0,58,20Zm-2,0a4,4,0,0,1-8,0V18h8ZM46,20a4,4,0,0,1-8,0V18h8ZM36,20a4,4,0,0,1-8,0V18h8ZM26,20a4,4,0,0,1-8,0V18h8ZM9.7207,12H54.2793l1.3335,4H8.38721ZM13,4H51V6H13ZM10,8H54v2H10ZM8,20V18h8v2a4,4,0,0,1-8,0ZM55,60H9V58H55ZM37,56H27V36H37Zm2,0V35a1,1,0,0,0-1-1H26a1,1,0,0,0-1,1V56H13V25.90967a6.00541,6.00541,0,0,0,4-2.6001,5.99131,5.99131,0,0,0,10,0,5.99131,5.99131,0,0,0,10,0,5.99131,5.99131,0,0,0,10,0,6.00541,6.00541,0,0,0,4,2.6001V56Z"
+                  fill="#000000" style="fill: rgb(225, 22, 79);"></path>
+                <path
+                  d="M48,34H42a1,1,0,0,0-1,1V49a1,1,0,0,0,1,1h6a1,1,0,0,0,1-1V35A1,1,0,0,0,48,34Zm-1,2v5H43V36ZM43,48V43h4v5Z"
+                  fill="#000000" style="fill: rgb(225, 22, 79);"></path>
+                <path
+                  d="M22,34H16a1,1,0,0,0-1,1V49a1,1,0,0,0,1,1h6a1,1,0,0,0,1-1V35A1,1,0,0,0,22,34Zm-1,2v5H17V36ZM17,48V43h4v5Z"
+                  fill="#000000" style="fill: rgb(225, 22, 79);"></path>
+              </g>
+            </svg>
+          </div>
+          <h3 class="text-lg leading-normal mb-2 font-semibold text-black">Unrivalled Product Range</h3>
+          <p class="text-gray-500">This is a wider card with supporting text below as a natural content.</p>
+        </div>
+        <!-- end service block -->
+      </div>
+      <div class="flex-shrink px-4 max-w-full w-full sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp" data-wow-duration="1s"
+        data-wow-delay=".1s"
+        style="visibility: visible; animation-duration: 1s; animation-delay: 0.1s; animation-name: fadeInUp;">
+        <!-- service block -->
+        <div
+          class="py-8 px-12 mb-12  border-b border-gray-100 transform transition duration-300 ease-in-out hover:-translate-y-2">
+          <div class="inline-block text-gray-900 mb-4">
+            <!-- icon -->
+            <!-- icon666.com - MILLIONS vector ICONS FREE --><svg id="Capa_1" width="2rem" height="2rem"
+              enable-background="new 0 0 512 512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+              <g>
+                <path
+                  d="m343.06 117.502c2.558-8.389 3.94-17.287 3.94-26.502 0-50.178-40.822-91-91-91s-91 40.822-91 91c0 9.006 1.349 17.946 3.946 26.499l-61.446 30.527v363.974h297v-363.974zm-148.06-26.502c0-33.636 27.364-61 61-61s61 27.364 61 61c0 4.416-.483 8.719-1.379 12.871l-59.621-29.62-59.624 29.621c-.906-4.213-1.376-8.529-1.376-12.872zm179.5 391h-237v-315.38l118.5-58.871 46.238 22.971c-11.195 13.014-27.764 21.28-46.238 21.28v30c30.264 0 57.12-14.854 73.673-37.65l44.827 22.27z"
+                  fill="#000000" style="fill: rgb(225, 22, 79);"></path>
+                <path d="m200.419 422h111.162v30h-111.162z" fill="#000000" style="fill: rgb(225, 22, 79);"></path>
+                <path
+                  d="m240.959 389h30v-25.378c16.611-5.134 28.714-20.633 28.714-38.907 0-22.45-18.265-40.714-40.715-40.714h-5.143c-5.907 0-10.714-4.807-10.714-10.714s4.807-10.714 10.714-10.714h47.185v-30h-30.041v-23.573h-30v25.664c-16.166 5.396-27.857 20.664-27.857 38.622 0 22.45 18.265 40.714 40.714 40.714h5.143c5.908 0 10.715 4.807 10.715 10.714s-4.807 10.714-10.715 10.714h-47.959v30h29.959z"
+                  fill="#000000" style="fill: rgb(225, 22, 79);"></path>
+              </g>
+            </svg>
+          </div>
+          <h3 class="text-lg leading-normal mb-2 font-semibold text-black">Transparent Pricing</h3>
+          <p class="text-gray-500">This is a wider card with supporting text below as a natural content.</p>
+        </div>
+        <!-- end service block -->
+      </div>
+      <div class="flex-shrink px-4 max-w-full w-full sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp" data-wow-duration="1s"
+        data-wow-delay=".3s"
+        style="visibility: visible; animation-duration: 1s; animation-delay: 0.3s; animation-name: fadeInUp;">
+        <!-- service block -->
+        <div
+          class="py-8 px-12 mb-12  border-b border-gray-100 transform transition duration-300 ease-in-out hover:-translate-y-2">
+          <div class="inline-block text-gray-900 mb-4">
+            <!-- icon -->
+            <!-- icon666.com - MILLIONS vector ICONS FREE --><!-- icon666.com - MILLIONS vector ICONS FREE --><svg
+              id="Layer_1" width="2rem" height="2rem" enable-background="new 0 0 24 24" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <g>
+                <path
+                  d="m21 8h-1.1c-.5-3.6-3.3-6.5-6.9-6.9-4.4-.6-8.4 2.5-8.9 6.9h-1.1c-1.1 0-2 .9-2 2v4c0 1.1.9 2 2 2h3v-7c0-3.3 2.7-6 6-6s6 2.7 6 6v6c0 3.3-2.7 6-6 6v2c4 0 7.4-3 7.9-7h1.1c1.1 0 2-.9 2-2v-4c0-1.1-.9-2-2-2z"
+                  fill="#000000" style="fill: rgb(225, 22, 79);"></path>
+                <path
+                  d="m16.2 15.8-1.1-1.7c-1 .6-2.1.9-3.2.9s-2.2-.3-3.2-.9l-1.1 1.7c1.4.8 2.9 1.2 4.4 1.2s3-.4 4.2-1.2z"
+                  fill="#000000" style="fill: rgb(225, 22, 79);"></path>
+              </g>
+            </svg>
+          </div>
+          <h3 class="text-lg leading-normal mb-2 font-semibold text-black">Personalize Sevice</h3>
+          <p class="text-gray-500">This is a wider card with supporting text below as a natural content.</p>
+        </div>
+        <!-- end service block -->
+      </div>
+    </div>
+    <!-- end row -->
+  </div>
+</div>
+
+<app-footer></app-footer>
